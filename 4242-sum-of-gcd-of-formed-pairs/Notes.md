@@ -1,0 +1,1 @@
+<h2>sum-of-gcd-of-formed-pairs Notes</h2><hr>[ Time taken: 1d 1hr 0m 34s ]
