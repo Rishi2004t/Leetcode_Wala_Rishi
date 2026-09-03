@@ -1,21 +1,21 @@
 class Solution {
     public boolean uniformArray(int[] nums1) {
-        int minVal = Integer.MAX_VALUE;
-        int odds = 0, evens = 0;
-        boolean hasOdd = false;
+        int min = Integer.MAX_VALUE;
 
         for (int x : nums1) {
-            if (x % 2 == 0) evens++;
-            else { odds++; hasOdd = true; }
-            minVal = Math.min(minVal, x);
+            min = Math.min(min, x);
         }
 
-        if (evens == nums1.length) return true;
+        if ((min & 1) == 1) {
+            return true;
+        }
 
-        if (odds == nums1.length) return true;
+        for (int x : nums1) {
+            if ((x & 1) == 1) {
+                return false;
+            }
+        }
 
-        if (minVal % 2 != 0) return true;
-
-        return false;
+        return true;
     }
 }
