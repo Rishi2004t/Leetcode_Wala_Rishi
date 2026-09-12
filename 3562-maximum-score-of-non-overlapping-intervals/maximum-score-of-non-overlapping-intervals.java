@@ -59,7 +59,7 @@ class Solution {
     }
 
     private boolean lexSmaller(int[] a, int[] b) {
-        int len = Math.min(a.length, a.length);
+        int len = Math.min(a.length, b.length);
         for (int i = 0; i < len; i++) {
             if (a[i] != b[i]) return a[i] < b[i];
         }
